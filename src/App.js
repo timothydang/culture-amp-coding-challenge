@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Header } from 'semantic-ui-react';
+import AppRouter from './Routes';
+
+const style = {
+  h1: {
+    marginTop: '1em',
+    marginBottom: '1em'
+  }
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header as="h1" content='Surveys' textAlign="center" style={style.h1}/>
+      <AppRouter />
     </div>
   );
 }

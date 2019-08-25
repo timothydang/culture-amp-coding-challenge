@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application root should render without crashing 1`] = `
+<div>
+  <h1
+    className="ui center aligned header"
+    style={
+      Object {
+        "marginBottom": "1em",
+        "marginTop": "1em",
+      }
+    }
+  >
+    Surveys
+  </h1>
+  <div
+    className="ui active centered inline loader"
+  />
+</div>
+`;
