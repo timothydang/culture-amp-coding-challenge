@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header } from 'semantic-ui-react';
+import { Header, Grid } from 'semantic-ui-react';
 import AppRouter from './Routes';
 
 const style = {
@@ -11,10 +11,14 @@ const style = {
 
 function App() {
   return (
-    <div>
-      <Header as="h1" content='Surveys' textAlign="center" style={style.h1}/>
+    <Grid>
+      <Grid.Column width={4}></Grid.Column>
+      <Grid.Column width={8}>
+        <Header as="h1" content='Surveys' textAlign="center" style={style.h1}/>
       <AppRouter />
-    </div>
+      </Grid.Column>
+      <Grid.Column width={4}></Grid.Column>
+    </Grid>
   );
 }
 

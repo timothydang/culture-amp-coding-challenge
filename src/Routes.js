@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Loader } from 'semantic-ui-react';
 import Home from './pages/Home';
 import SurveyDetails from './pages/SurveyDetails';
-import ErrorPage from './pages/ErrorPage';
+import ErrorMessage from './components/Error';
 
 function AppRouter () {
   return (
     <Suspense fallback={<Loader active inline='centered' />}>
-      <NetworkErrorBoundary fallbackComponent={ErrorPage}>
+      <NetworkErrorBoundary fallbackComponent={ErrorMessage}>
         <Router>
           <Route exact path="/" component={Home} />
           <Route path="/survey/:id" component={SurveyDetails} />

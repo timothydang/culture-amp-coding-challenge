@@ -1,10 +1,11 @@
 import React from 'react';
-import { Table } from 'semantic-ui-react';
+import { Table, Message } from 'semantic-ui-react';
 import Question from './Question';
 
 export default function QuestionList({ questions }) {
   return (
-    <Table celled>
+    (questions && questions.length > 0) ?
+    <Table celled data-testid="questionList">
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell>Question</Table.HeaderCell>
@@ -24,5 +25,6 @@ export default function QuestionList({ questions }) {
         }
       </Table.Body>
     </Table>
+    : <Message warning data-testid="message">No question available for this topic.</Message>
   );
 }
