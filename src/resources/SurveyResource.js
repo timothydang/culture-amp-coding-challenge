@@ -1,4 +1,5 @@
 import { Resource } from 'rest-hooks';
+import APP_CONFIG from './../config';
 
 export default class SurveyResource extends Resource {
   url = '';
@@ -7,7 +8,6 @@ export default class SurveyResource extends Resource {
   response_rate = 0;
   submitted_response_count = 0;
   themes = '';
-  hasError = false;
 
   pk() {
     // Note: since resource id is missing, try to get it from the url
@@ -39,6 +39,6 @@ export default class SurveyResource extends Resource {
     };
   }
 
-  // static urlRoot = 'https://px2yf2j445.execute-api.us-west-2.amazonaws.com/production/surveys';
-  static urlRoot = 'http://localhost:8005/surveys';
+  // Note: Root URL of our API resources
+  static urlRoot = `${APP_CONFIG.url}/surveys`;
 }
