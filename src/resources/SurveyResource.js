@@ -23,10 +23,8 @@ export default class SurveyResource extends Resource {
 
   // Note: overwrite the default fetch shape in rest-hooks
   static detailShape() {
-    const superShape = super.detailShape();
-
     return {
-      ...superShape,
+      ...super.detailShape(),
       schema: { survey_result_detail: this.getEntitySchema() }
     };
   }

@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { MockProvider } from 'rest-hooks/test';
-import { render, cleanup, fireEvent } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import Component from './../Survey';

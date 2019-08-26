@@ -1,9 +1,8 @@
 import React from 'react';
 import { Header, Label, Tab, Divider, Segment, Loader } from 'semantic-ui-react';
-import { useResource } from 'rest-hooks';
+import { useResource, NetworkErrorBoundary } from 'rest-hooks';
 import QuestionList from './QuestionList';
 import SurveyResource from './../resources/SurveyResource';
-import { NetworkErrorBoundary } from 'rest-hooks';
 import ErrorMessage from './Error';
 
 export default function Survey({ id }) {
